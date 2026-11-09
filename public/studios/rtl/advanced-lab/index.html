@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Playground — Advanced RTL Lab</title>
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230284c7'/%3E%3Ctext x='12' y='16' text-anchor='middle' fill='white' font-size='10' font-family='sans-serif' font-weight='bold'%3ERTL%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles/advanced.css">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-left">
+            <a href="../index.html" class="nav-back-btn" title="Return to single-bit gate-level schematic and RTL fundamentals">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>RTL Fundamentals</span>
+            </a>
+            <div style="display: flex; flex-direction: column;">
+                <span class="header-title">PD Playground: Advanced RTL Lab</span>
+                <span class="header-subtitle">Multi-Bit Vectors, Arithmetic Datapaths, Sequential Systems & FSMs</span>
+            </div>
+        </div>
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="datapath">Datapath & ALU</button>
+            <button class="nav-tab" data-tab="sequential">Registers & Counters</button>
+            <button class="nav-tab" data-tab="fsm">State Machines</button>
+            <button class="nav-tab" data-tab="waveforms">Waveforms</button>
+            <button class="nav-tab" data-tab="lessons">Curriculum (24)</button>
+            <button class="nav-tab" data-tab="verilog">Verilog HDL</button>
+        </nav>
+    </header>
+
+    <!-- Main Tab Views -->
+    <main class="app-main">
+        <!-- Tab 1: Datapath & Arithmetic -->
+        <section id="tab-datapath" class="tab-content active">
+            <div class="guided-orientation-banner" style="margin-bottom: 16px; padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-cyan); border-radius: 4px; font-size: 12px; line-height: 1.5; color: #bae6fd;">
+                <strong>🧭 Interactive Datapath & ALU Guide:</strong> Multi-bit buses group wires together into words (e.g., 4-bit nibbles). Click input vector bits (A, B) below to change numerical values. Select an ALU operation (ADD, SUB, AND, OR, XOR) to observe zero-cycle combinational calculation and live arithmetic condition flags: <strong>Z</strong> (Zero), <strong>C</strong> (Carry Out), <strong>V</strong> (Two's Complement Overflow), and <strong>N</strong> (Negative).
+            </div>
+            <div id="datapath-mount"></div>
+        </section>
+
+        <!-- Tab 2: Sequential Systems -->
+        <section id="tab-sequential" class="tab-content">
+            <div class="guided-orientation-banner" style="margin-bottom: 16px; padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-cyan); border-radius: 4px; font-size: 12px; line-height: 1.5; color: #bae6fd;">
+                <strong>🧭 Sequential Systems Guide:</strong> Registers store binary words across clock cycles. Toggle the <strong>Enable</strong> and <strong>Reset</strong> switches, then click <strong>"Single Clock Pulse"</strong> to advance time. Notice how data is captured strictly on the 0→1 rising clock transition! Check the Waveforms tab to view multi-bit bus activity.
+            </div>
+            <div id="sequential-mount"></div>
+        </section>
+
+        <!-- Tab 3: State Machines -->
+        <section id="tab-fsm" class="tab-content">
+            <div class="guided-orientation-banner" style="margin-bottom: 16px; padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-cyan); border-radius: 4px; font-size: 12px; line-height: 1.5; color: #bae6fd;">
+                <strong>🧭 Finite State Machine (FSM) Guide:</strong> FSMs are the control brains of digital chips. Select a state preset (e.g. 101 Sequence Detector or Traffic Controller), toggle input bits, and step the clock to trace active states in the interactive diagram. Compare <strong>Moore outputs</strong> (registered, glitch-free) with <strong>Mealy outputs</strong> (combinational, zero-latency).
+            </div>
+            <div id="fsm-mount"></div>
+        </section>
+
+        <!-- Tab 4: Waveforms -->
+        <section id="tab-waveforms" class="tab-content">
+            <div class="card">
+                <h3>Multi-Bit Sequential Bus Waveforms</h3>
+                <canvas id="advanced-waveform-canvas" width="1000" height="300" style="width: 100%; height: 300px;"></canvas>
+            </div>
+        </section>
+
+        <!-- Tab 5: Guided Lessons -->
+        <section id="tab-lessons" class="tab-content">
+            <div id="lessons-mount"></div>
+        </section>
+
+        <!-- Tab 6: Verilog HDL Viewer -->
+        <section id="tab-verilog" class="tab-content">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <h3>Synthesizable Verilog RTL Viewer</h3>
+                        <select id="verilog-module-select" class="select-input">
+                            <option value="half_adder">Half Adder (1-bit)</option>
+                            <option value="full_adder">Full Adder (1-bit with P/G)</option>
+                            <option value="rca4">Ripple-Carry Adder (4-bit Parameterized)</option>
+                            <option value="alu4" selected>Educational ALU (4-bit with Z, C, V, N Flags)</option>
+                            <option value="reg4">Multi-Bit Register (Clock Enable & Sync Reset)</option>
+                            <option value="counter">Modulo Counter (with Terminal Count)</option>
+                            <option value="shift">Universal Shift Register (SISO / SIPO / PISO)</option>
+                            <option value="fsm">Finite State Machine (2-Process Synthesizable)</option>
+                        </select>
+                    </div>
+                    <button id="btn-copy-verilog" class="btn btn-secondary btn-sm">Copy Code</button>
+                </div>
+                <div id="verilog-code-viewer" class="code-viewer-box"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- App Module Bootstrap -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>

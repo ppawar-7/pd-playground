@@ -1,0 +1,167 @@
+/* ===================================================
+   KingdomCard Styles — World Map (Light Theme)
+   =================================================== */
+
+.kingdom-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 2px solid transparent;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+.kingdom-card:hover {
+  transform: translateY(-4px);
+}
+
+.kingdom-card--available {
+  background: #ffffff;
+  border-color: var(--card-border-color, var(--color-primary));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 0 16px var(--card-glow, rgba(124,58,237,0.15));
+}
+
+.kingdom-card--available:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 24px var(--card-glow, rgba(124,58,237,0.25));
+}
+
+.kingdom-card--completed {
+  background: #ffffff;
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(5,150,105,0.1);
+}
+
+.kingdom-card--locked {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.kingdom-card--locked:hover {
+  transform: none;
+}
+
+/* Gradient top bar */
+.kingdom-card__top-bar {
+  height: 5px;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+.kingdom-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kingdom-card__emoji-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.kingdom-card__order {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+}
+
+.kingdom-card__name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.kingdom-card__subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.kingdom-card__description {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kingdom-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.kingdom-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.kingdom-card__sanity-badge {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  color: #475569 !important;
+}
+
+.kingdom-card__sanity-badge--all {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857 !important;
+}
+
+.kingdom-card__progress {
+  margin-top: 0.75rem;
+}
+
+.kingdom-card__progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.kingdom-card__lock-text {
+  font-size: 0.78rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #e2e8f0;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}

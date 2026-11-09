@@ -1,0 +1,116 @@
+/* ===================================================
+   Sanity Checks Page Styles — Light Theme
+   =================================================== */
+
+.sanity-page {
+  padding: 2.5rem 0 5rem;
+}
+
+.sanity-page__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sanity-page__emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sanity-page__intro {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.sanity-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sanity-card {
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.sanity-card--unlocked {
+  cursor: pointer;
+}
+
+.sanity-card--unlocked:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.sanity-card--locked {
+  background: #f8fafc;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.sanity-card__gradient-bar {
+  height: 5px;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+.sanity-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.sanity-card__name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.sanity-card__desc {
+  color: #475569;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sanity-card__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sanity-card__placeholder-note {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  background: #ffffff;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sanity-back {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}

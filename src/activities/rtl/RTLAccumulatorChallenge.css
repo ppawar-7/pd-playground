@@ -1,0 +1,33 @@
+/* RTLAccumulatorChallenge.css */
+.accum-challenge {
+  width: 100%;
+}
+
+.accum-svg-canvas {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+}
+
+.accum-wiring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.accum-wiring-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.accum-port-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+}

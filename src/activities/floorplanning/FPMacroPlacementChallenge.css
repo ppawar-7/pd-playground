@@ -1,0 +1,10 @@
+/* FPMacroPlacementChallenge.css */
+.fp-macro-challenge {
+  width: 100%;
+}
+
+.active-macro-card {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+}

@@ -1,0 +1,149 @@
+/* ===================================================
+   LevelCard Styles — Kingdom Page (Light Theme)
+   =================================================== */
+
+.level-card {
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card:hover {
+  transform: translateX(4px);
+}
+
+.level-card--available {
+  background: #ffffff;
+  border-color: var(--color-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.level-card--available:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(124,58,237,0.12);
+}
+
+.level-card--completed {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  cursor: pointer;
+}
+
+.level-card--completed:hover {
+  box-shadow: 0 4px 12px rgba(5,150,105,0.1);
+}
+
+.level-card--locked {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.level-card--locked:hover {
+  transform: none;
+}
+
+.level-card__number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.level-card__number--available {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 2px solid #7c3aed;
+}
+
+.level-card__number--completed {
+  background: #d1fae5;
+  color: #047857;
+  border: 2px solid #059669;
+}
+
+.level-card__number--locked {
+  background: #f1f5f9;
+  color: #94a3b8;
+  border: 2px solid #cbd5e1;
+}
+
+.level-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.level-card__title {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.level-card__desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.level-card__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.level-card__stars {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.level-card__xp {
+  font-size: 0.75rem;
+  color: #b45309;
+  font-weight: 800;
+}
+
+.level-card__lock-hint {
+  font-size: 0.72rem;
+  color: #dc2626;
+  text-align: right;
+  font-weight: 600;
+}
+
+.level-card__duration {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.level-card__coming-soon-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}

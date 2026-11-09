@@ -1,0 +1,60 @@
+/* ===================================================
+   XPBar — Player XP Level Progress Bar (Light Theme)
+   =================================================== */
+
+.xp-bar {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.xp-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.xp-bar__level {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.xp-bar__level-badge {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.3);
+}
+
+.xp-bar__level-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.xp-bar__level-name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.xp-bar__xp-display {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.xp-bar__xp-display strong {
+  color: #b45309;
+  font-weight: 800;
+}

@@ -1,0 +1,149 @@
+/* RTLDFFChallenge.css */
+.dff-challenge {
+  width: 100%;
+}
+
+.dff-challenge__concept-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dff-challenge__heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.dff-challenge__lead {
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.dff-challenge__callout {
+  background: #ede9fe;
+  border-left: 4px solid #7c3aed;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  color: #4c1d95;
+  line-height: 1.5;
+}
+
+.dff-challenge__schematic-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dff-schematic-wrapper {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.dff-svg-canvas {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+}
+
+.dff-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dff-control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dff-control-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.dff-btn-toggle {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dff-btn-toggle.active {
+  background: #7c3aed;
+  border-color: #6d28d9;
+  color: #ffffff;
+}
+
+.dff-btn-toggle.active-rst {
+  background: #ef4444;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+.dff-waveform-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dff-challenge__table-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dff-challenge__section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.dff-challenge__subtext {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.dff-truth-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.dff-truth-table th,
+.dff-truth-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dff-truth-table th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #475569;
+}
+
+.dff-challenge__concept-section {
+  margin-top: 1.5rem;
+}

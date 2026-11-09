@@ -1,0 +1,290 @@
+/* ===================================================
+   World Map Page Styles — Light Theme
+   =================================================== */
+
+.world-map {
+  padding: 2.5rem 0 5rem;
+}
+
+.world-map__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.world-map__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.world-map__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Progress summary bar */
+.world-map__summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 2rem;
+  max-width: 620px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.world-map__summary-stat {
+  text-align: center;
+}
+
+.world-map__summary-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.world-map__summary-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* Path / Journey layout */
+.world-map__journey {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Vertical connecting line */
+.world-map__path-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #7c3aed,
+    #f59e0b 50%,
+    #059669
+  );
+  transform: translateX(-50%);
+  opacity: 0.35;
+  z-index: 0;
+  border-radius: 999px;
+}
+
+/* Each kingdom row alternates left/right */
+.world-map__kingdom-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.world-map__kingdom-row--left .world-map__card-slot {
+  grid-column: 1;
+}
+
+.world-map__kingdom-row--right .world-map__card-slot {
+  grid-column: 3;
+}
+
+/* Center dot on path */
+.world-map__node {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-map__node-dot {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  border: 3px solid #cbd5e1;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 2;
+}
+
+.world-map__node-dot--active {
+  border-color: var(--color-primary);
+  background: #ede9fe;
+  box-shadow: 0 0 16px rgba(124,58,237,0.3);
+  animation: pulse 2s infinite;
+}
+
+.world-map__node-dot--completed {
+  border-color: var(--color-accent);
+  background: #d1fae5;
+  box-shadow: 0 0 12px rgba(5,150,105,0.2);
+}
+
+.world-map__node-dot--locked {
+  opacity: 0.6;
+  background: #f1f5f9;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(124,58,237,0.3); }
+  50% { box-shadow: 0 0 22px rgba(124,58,237,0.5); }
+}
+
+/* Empty slot on the opposite side (for alternating layout) */
+.world-map__spacer {
+  /* intentionally empty */
+}
+
+
+@media (max-width: 640px) {
+  .world-map__path-line { display: none; }
+  .world-map__kingdom-row {
+    grid-template-columns: 1fr;
+  }
+  .world-map__kingdom-row--left .world-map__card-slot,
+  .world-map__kingdom-row--right .world-map__card-slot {
+    grid-column: 1;
+  }
+  .world-map__node { display: none; }
+  .world-map__spacer { display: none; }
+}
+
+
+/* ===================================================
+   Three-Studio Hub Styles
+   =================================================== */
+
+.three-studios-hub {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.studio-hub-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.studio-hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.studio-hub-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.studio-hub-card__title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.studio-hub-card__emoji {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.studio-hub-card__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.2rem 0;
+}
+
+.studio-hub-card__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.studio-hub-card__tagline {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.studio-hub-card__highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.studio-hub-card__highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.studio-hub-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.industrial-flow-banner {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  margin: 2rem auto;
+  max-width: 960px;
+  color: #166534;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.maintainer-mode-toggle {
+  text-align: center;
+  margin-top: 2.5rem;
+}

@@ -1,0 +1,16 @@
+/* PhysicalCanvas.css */
+.physical-canvas {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: var(--radius-md, 8px);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.physical-svg {
+  display: block;
+}

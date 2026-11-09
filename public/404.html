@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PD Playground</title>
+  <script>
+    // GitHub Pages Single Page Application (SPA) Hash Redirect
+    // Converts deep links (e.g., /pd-playground/studio/floorplanning)
+    // to hash routes (e.g., /pd-playground/#/studio/floorplanning)
+    (function () {
+      var path = window.location.pathname;
+      var repoBase = '/pd-playground';
+      if (path.indexOf(repoBase) === 0) {
+        var route = path.slice(repoBase.length);
+        if (!route || route === '/') {
+          window.location.replace(repoBase + '/#/' + window.location.search + window.location.hash);
+        } else {
+          if (!route.startsWith('/')) route = '/' + route;
+          window.location.replace(repoBase + '/#' + route + window.location.search + window.location.hash);
+        }
+      } else {
+        window.location.replace('/pd-playground/');
+      }
+    })();
+  </script>
+</head>
+<body style="background: #0b0f19; color: #94a3b8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center;">
+  <div style="padding: 2rem; background: #111827; border: 1px solid #1f2937; border-radius: 12px; max-width: 480px;">
+    <h2 style="color: #38bdf8; margin-top: 0;">Opening PD Playground...</h2>
+    <p>Redirecting you to the requested engineering studio...</p>
+    <p style="font-size: 0.85rem; color: #64748b;">If you are not redirected automatically, <a href="/pd-playground/#/world-map" style="color: #38bdf8;">click here to enter the Three-Studio Hub</a>.</p>
+  </div>
+</body>
+</html>

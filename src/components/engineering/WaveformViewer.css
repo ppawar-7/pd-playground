@@ -1,0 +1,18 @@
+/* WaveformViewer.css */
+.waveform-viewer {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: var(--radius-md, 8px);
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.waveform-viewer__scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.waveform-svg {
+  display: block;
+}

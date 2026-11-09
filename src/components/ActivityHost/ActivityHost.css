@@ -1,0 +1,99 @@
+/* ActivityHost.css */
+.activity-host {
+  width: 100%;
+}
+
+.activity-coming-soon {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md, 8px);
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.activity-coming-soon__badge-row {
+  margin-bottom: 1.25rem;
+}
+
+.activity-coming-soon .badge--coming-soon {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.activity-coming-soon__icon {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.activity-coming-soon__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.activity-coming-soon__desc {
+  color: #475569;
+  max-width: 580px;
+  margin: 0 auto 1.25rem auto;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.activity-coming-soon__syllabus {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  max-width: 580px;
+  margin: 0 auto 1.5rem auto;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.activity-coming-soon__syllabus-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+}
+
+.activity-coming-soon__syllabus-text {
+  font-size: 0.92rem;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.activity-coming-soon__notice {
+  display: inline-block;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.activity-coming-soon__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
